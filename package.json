@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aleSer308/12-AriesEquestrian/issues"
   },
-  "homepage": "https://github.com/aleSer308/12-AriesEquestrian#readme"
+  "homepage": "https://github.com/aleSer308/12-AriesEquestrian#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
