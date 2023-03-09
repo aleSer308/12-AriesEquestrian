@@ -1,0 +1,80 @@
+<%- include('../partials/head')%>
+    <link rel="stylesheet" href="css\register.css">
+</head>
+
+<body>
+<%- include('../partials/header')%>
+    <main>
+        <!-- Formulario  -->
+        <div class="register">
+            <form method="POST" action="/register" enctype="multipart/form-data">
+                <h2>Crear Cuenta</h2>
+                <div class="nombre-apellido">
+                    <p>Nombre</p>
+                    <input 
+                        type="text" 
+                        name="firstName" 
+                        class="from-control"<%= locals.errors && errors.firstName ? 'is-invalid' : 'is-valid'  %> 
+                        value="<%= locals.oldData ? oldData.firstName : null %>"
+                    >
+                    <% if (locals.errors && errors.firstName) { %>
+                        <div class="form-error-msg">
+                            <%= errors.firstName.msg %> 
+                        </div>
+                    <% } %>
+                    <p>Apellido</p>
+                    <input 
+                    type="text" 
+                    name="lastName" 
+                    value="<%= locals.oldData ? oldData.lastName : null %>"
+                    >
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class="form-error-msg">
+                            <%= errors.lastName.msg %> 
+                        </div>
+                    <% } %>
+
+                    <p>Email</p>    
+                    <input 
+                    type="text" 
+                    name="email" 
+                    value="<%= locals.oldData ? oldData.email : null %>"
+                    >
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="form-error-msg">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
+                    <p>Contraseña</p>    
+                    <input type="password" name="password">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="form-error-msg">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
+                    <p>Repetir Contraseña</p>  
+                    <input type="password" name="passConfirm">
+                    <% if (locals.errors && errors.passConfirm) { %>
+                        <div class="form-error-msg">
+                            <%= errors.passConfirm.msg %> 
+                        </div>
+                    <% } %>
+                    <p>Imagen</p>
+                    <input type="file"
+                        name="image" 
+                        class="from-control"<%= locals.errors && errors.image ? 'is-invalid' : null %>">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="form-error-msg">
+                            <%= errors.image.msg %> 
+                        </div>
+                    <% } %>
+                </div> 
+                <br> 
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer')%>
+
+</body>
+</html>
