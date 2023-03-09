@@ -1,0 +1,19 @@
+{
+  "name": "12-ariesequestrian",
+  "version": "1.0.0",
+  "description": "Practices",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleSer308/12-AriesEquestrian.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleSer308/12-AriesEquestrian/issues"
+  },
+  "homepage": "https://github.com/aleSer308/12-AriesEquestrian#readme"
+}
